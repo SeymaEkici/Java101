@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        int[] array = {15,12,788,1,-1,-778,2,0};
+        int enteredNumber = 5;
+        
+        Arrays.sort(array);
+
+        int nearestSmall = 0;
+        int nearestBig = 0;
+
+        for (int i = array.length - 1; i >= 0; i--) {
+            
+            if (array[i] < enteredNumber){
+                nearestSmall = array[i];
+                break;
+            }
+        }
+
+        for (int i = 0; i < array.length; i++){
+
+            if (array[i] > enteredNumber){
+                nearestBig = array[i];
+                break;
+            }
+        }
+
+        System.out.println("The nearest number smaller than the entered number: " + nearestSmall);
+        System.out.println("The nearest number bigger than the entered number: " + nearestBig);
+    }
+}
