@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int digit = input.nextInt();
+
+        int first = 0, second = 1;
+
+        System.out.print(second + " ");
+
+        for(int i=0 ; i < digit ; i++){
+            
+            int temp = first + second;
+            first = second;
+            second = temp;
+            System.out.print(second + " ");
+        }
+
+        input.close();
+    }
+}
