@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter two numbers for calculating the combination");
+        int firstNumber = input.nextInt();
+        int secondNumber = input.nextInt();
+        int firstFactorial = 1, secondFactorial = 1, firstMinusSecondFactorial = 1;
+
+        for( int i = 1; i <= firstNumber; i++){
+            firstFactorial *= i;
+        }
+
+        for( int i = 1; i <= secondNumber; i++){
+            secondFactorial *= i;
+        }
+
+        for( int i = 1; i <= firstMinusSecondFactorial; i++){
+            firstMinusSecondFactorial *= i;
+        }
+
+        double result = firstFactorial / (secondFactorial * firstMinusSecondFactorial);
+
+        System.out.println("The result is: " + result);
+    }
+}
